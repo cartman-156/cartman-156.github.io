@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Chic - Stylishly Simple</title>
+  <title>Chic - Contact Us</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -43,9 +43,7 @@
           <div class="container">
             <!-- logo -->
             <div class="logo">
-              <a href="index.html">
-								<img src="assets/img/logo.png" alt="" />
-							</a>
+				<a style="text-decoration:none" href="index.html"><h1>Chic</h1></a>
             </div>
             <!-- end logo -->
             <!-- top menu -->
@@ -129,38 +127,55 @@
             <div class="spacer30">
             </div>
 
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="sendmessage"><i class="icon-bell"></i>Thank you for reaching out to us!!</div>
             <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScuyevJYdERyZ3s8Zr-Bz9CSetOX-WZQWghgjPQABO3giJoBw/formResponse?" method="POST" enctype="text/plain" target="hidden_iframe" onSubmit="submitted=true;showMsg()" name="cform" id="cform" class="contactForm">
               <div class="row">
                 <div class="span4 form-group">
-                  <input type="text" name="name" class="input-block-level" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                  <input type="text" name="entry.279735369" class="input-block-level" id="entry.279735369" placeholder="Your Name" data-rule="minlen:5" data-msg="Please enter at least 5 chars" />
                   <div class="validation"></div>
                 </div>
-
                 <div class="span4 form-group">
-                  <input type="email" class="input-block-level" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="email" class="input-block-level" name="entry.394666244" id="entry.394666244" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validation"></div>
                 </div>
                 <div class="span8 form-group">
-                  <input type="text" class="input-block-level" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="text" class="input-block-level" name="entry.447506332" id="entry.447506332" placeholder="Subject" data-rule="minlen:10" data-msg="Please enter at least 10 chars of subject" />
                   <div class="validation"></div>
                 </div>
                 <div class="span8 form-group">
-                  <textarea class="input-block-level" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                  <textarea class="input-block-level" name="entry.851815034" id="entry.851815034" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
                   <div class="text-center">
-                    <button class="btn btn-theme" type="submit">Send a message</button>
+                    <button class="btn btn-inverse btn-rounded" type="submit"><i class="icon-envelope"></i> Send a message</button>
                   </div>
                 </div>
+			  	<script>
+					function showMsg() {
+						if(submitted)
+						{
+							$("#sendmessage").addClass("show");
+							$("#errormessage").removeClass("show");
+							document.getElementById("cform").reset();
+						}
+						else
+						{
+							$("#sendmessage").removeClass("show");
+          					$("#errormessage").addClass("show");
+          					$('#errormessage').html(msg);
+						}
+					}
+				</script>
               </div>
             </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){}"></iframe>
           </div>
         </div>
       </div>
     </section>
     <!-- Footer
  ================================================== -->
+    
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -168,7 +183,7 @@
             <div class="widget">
               <h5>Interesting pages</h5>
               <ul class="regular">
-                <li><a href="about.html">About our company</a></li>
+                <li><a href="index.html#about-us">About our company</a></li>
                 <li><a href="products.html">Our recent works</a></li>
                 <li><a href="contact.html">Get in touch with us</a></li>
               </ul>
@@ -178,14 +193,12 @@
             <div class="widget">
               <h5>How to find us</h5>
               <address>
-								<i class="icon-home"></i> <strong>Chic - Stylishly Simple</strong><br>
-								Planet Millennium Soc.<br>
-								Pimple Saudagar, Pune, India
-								</address>
-              <p>
-                <i class="icon-phone"></i> (91) 99-30-1563615<br>
-                <i class="icon-envelope-alt"></i> manasiawati@ymail.com
-              </p>
+                <i class="icon-home"></i> <strong>Chic - Stylishly Simple</strong><br>
+                Planet Millennium Soc.<br>
+                Pimple Saudagar, Pune, India
+              </address>
+              <p> <i class="icon-phone"></i> (91) 99-30-1563615<br>
+                <i class="icon-envelope-alt"></i> manasiawati@ymail.com </p>
             </div>
             <div class="widget">
               <ul class="social">
@@ -199,9 +212,7 @@
         <div class="container">
           <div class="row">
             <div class="span6">
-              <p>
-                &copy; Chic - All right reserved
-              </p>
+              <p> &copy; Chic - All right reserved </p>
             </div>
             <div class="span6">
               <div class="pull-right">
@@ -212,8 +223,7 @@
                     Licensing information: https://bootstrapmade.com/license/
                     Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Lumia
                   -->
-                  Created by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                </div>
+                  Created by <a href="https://bootstrapmade.com/">BootstrapMade</a></div>
               </div>
             </div>
           </div>
